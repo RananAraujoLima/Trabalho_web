@@ -1,0 +1,256 @@
+
+
+a{
+	color:#fff;
+	text-decoration: none;
+}
+
+h1{
+	text-align: center;
+}
+
+.container{
+	width:540px;
+	margin:40px auto;
+    overflow:auto;
+    
+}
+
+.slider-inner{
+	width:500px;
+	height:300px;
+	position:relative;
+	overflow:hidden;
+	float:left;
+	padding:3px;
+	border:#666 solid 1px;
+}
+
+.slider-inner img{
+	display:none;
+	width:500px;
+	height:300px;
+}
+
+.slider-inner img.active{
+	display:inline-block;
+}
+
+.prev,.next{
+	float:left;
+	margin-top:130px;
+	cursor: pointer;
+}
+
+.prev{
+	position:relative;
+	margin-right:-45px;
+	z-index:100;
+}
+
+.next{
+	position:relative;
+	margin-left:-45px;
+	z-index:100;
+}
+IMG.displayed {
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+    
+    IMG.displayedtwo {
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 155%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+    
+    IMG.displayedthree {
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 240%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+    
+    IMG.displayedfour {
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 320%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+    
+    IMG.displayedfive {
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 405%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+    
+    IMG.displayedsex {
+    margin: 0;
+    background: #222;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+    IMG.displayedseven {
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+    
+    IMG.displayedeight {
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 190%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+    
+    IMG.displayedenine {
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 250%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+    
+    IMG.displayedeten {
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 310%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+    *{
+        margin: 0;
+        padding: 0;
+    
+    }
+    
+    #main{
+      display: grid;
+      grid-template-areas: "header" "nav nav" "content aside "
+      "footer footer";
+    
+    
+    }
+    
+    .menu{
+    width: 100%;
+        height: 50px;
+        background-color: #222;
+        font-family: Arial;
+    }
+    .menu ul{
+        list-style: none;
+        position: relative;
+    }
+    
+    .menu ul li{
+        width: 150px;
+        float: left;
+    
+    }
+    
+    .menu a{
+        padding: 15px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        background-color: #222;
+        color: #fff;
+    
+    
+    }
+    
+    .menu a:hover{
+        background-color: #f4f4f4;
+        color: #555     
+    }
+    
+    label[for="bt_menu"]{
+        padding: 5px;
+        background-color: #222;
+        color :#fff;
+        font-family: "Arial"; 
+        text-align: center;
+        font-size: 30px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+    }
+    #bt_menu{
+    
+    display: none;
+    
+    }
+    label[for = "bt_menu"]{
+    display: none;
+    
+    }
+    @media(max-width: 800px){
+    .menu{
+        margin-top: 5px;
+    
+    }
+    .menu ul li{
+        width: 100%;
+        float: none;
+    
+    }
+    
+    }
+    #bloco{
+        background: #f8f4f4;float: right; margin: 40px; width:1430px; height: 550px;line-height:20px; font-size:20px; color:#170e0e; float:left; text-align:center ;
+        font-family: 'cursive' ;
+    
+    }
+    #blocotwo{
+        width: 100%; height: 150px;background-color: #222; line-height:60px; font-size:20px; float:left; text-align:center ;
+        font-family:'Arial' ; 
+    
+    } 
+
+    #blocofour{
+        width: 100%; height: 150px;background-color: #222; line-height:60px; font-size:20px; float:left; text-align:center ;
+        font-family:'Arial' ; 
+    
+    } 
+    .titulo1{ width: 100%; height: 150px;background-color: #e2e5e0; line-height:60px; font-size:50px; float:left; text-align:center ;
+        font-family:"futuralightbt" ; }
+    
+    h7{
+
+        font-family: 'cursive';
+        color:#e7e7e7;
+        }   
+        h8{
+        
+        font-family: 'cursive';
+        color:#e7e7e7;
+        }  
+        h6{
+
+            font-family: 'cursive';
+            color:#e7e7e7;
+        }  

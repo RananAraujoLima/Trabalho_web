@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+
+</head>
+<body>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active"><a class="nav-link" href="/inicio">Pagina Inicial
+						<span class="sr-only">(Página atual)</span>
+				</a></li>
+				
+				<li class="nav-item"><a class="nav-link" href="/prato/vizualizar">Pratos	</a></li>
+					
+				<li class="nav-item"><a class="nav-link disabled" href="/usuario/formulario">Formulario Usuario</a>
+				</li>
+				
+			
+				<td ><li class="nav-item">
+				<a class="nav-link disabled" href="/usuario/logar">Fazer Login</a></li></td>
+				</li>
+				</li>
+				
+				</li>
+				<td sec:authorize = "hasRole('ROLE_ADMIN')"><li class="nav-item">
+				<a class="nav-link disabled" href="/prato/formulario">Adicionar Pratos</a></li></td>
+				
+		
+				
+				<td sec:authorize = "hasRole('ROLE_CLIENTE')"><li class="nav-item">
+				<a class="nav-link disabled" href="/pedido/formulario">Adicionar Pedido</a></li></td>
+				
+				<td sec:authorize = "hasRole('ROLE_CLIENTE')"><li class="nav-item">
+				<a class="nav-link disabled" href="/pedido/listar">Listar Pedidos</a></li></td>
+						<td sec:authorize = "hasAnyRole('ROLE_ADMIN','ROLE_CLIENTE')"><li class="nav-item">
+				<a class="nav-link disabled" href="/usuario/logout">Logout</a></li></td>
+				
+				
+			</ul>
+		</div>
+	</nav>
+	<form method="POST" action="/prato/salvar"
+		enctype="multipart/form-data" th:object="${prato}">
+		<input type="hidden" th:field="*{id_prato}">
+
+		<div class="form-group">
+			<label for="exampleInputEmail1">Nome:</label> <input type="text"
+				class="form-control" id="exampleInputEmail1" th:field="*{nome}">
+		</div>
+
+		<div class="form-group">
+			<label for="exampleInputEmail1">Valor:</label> <input type="number"
+				class="form-control" id="exampleInputEmail1" th:field="*{valor}">
+		</div>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Cliente_ID</label> <input
+				type="number" class="form-control" id="exampleInputEmail1"
+				th:field="*{usuario.id}">
+		</div>
+
+
+
+		<div class="form-group">
+
+			Selecione Imagem: <input type="file" name="imagem">
+
+
+		</div>
+
+
+
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+	<li><a href="/logout"><span
+			class="glyphicon glyphicon-log-out"></span> Logout </a></li>
+	<script src="/js/bootstrap.min.js">
+		
+	</script>
+
+</body>
+</html>
